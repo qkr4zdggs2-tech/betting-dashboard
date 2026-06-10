@@ -4,7 +4,20 @@ import path from "path";
 
 const DATA_PATH = path.join(process.cwd(), "data", "tennis-analysis.json");
 
-function readData() {
+// ── KV helpers (Vercel KV when available, filesystem fallback locally) ─────────
+
+async function readData() {
+  // Try Vercel KV first
+  if (process.env.KV_REST_API_URL && process.env.KV_REST_API_TOKEN) {
+    try {
+      const { kv } = await import("@vercel/kv");
+      const data = await kv.get("tennis-analysis");
+      if (data) return data;
+    } catch {
+      // fall through to filesystem
+    }
+  }
+  // Filesystem fallback (local dev)
   try {
     const raw = fs.readFileSync(DATA_PATH, "utf-8");
     return JSON.parse(raw);
@@ -13,18 +26,28 @@ function readData() {
   }
 }
 
-function writeData(data: unknown) {
+async function writeData(data: unknown) {
+  // Try Vercel KV first
+  if (process.env.KV_REST_API_URL && process.env.KV_REST_API_TOKEN) {
+    try {
+      const { kv } = await import("@vercel/kv");
+      await kv.set("tennis-analysis", data);
+      return;
+    } catch {
+      // fall through to filesystem
+    }
+  }
+  // Filesystem fallback (local dev)
   try {
     fs.writeFileSync(DATA_PATH, JSON.stringify(data, null, 2), "utf-8");
   } catch {
-    // On Vercel (read-only filesystem) writes are silently ignored
-    // Data is updated via redeployment from GitHub
+    // read-only filesystem (Vercel without KV configured)
   }
 }
 
 // GET — return current analysis
 export async function GET() {
-  const data = readData();
+  const data = await readData();
   return NextResponse.json(data);
 }
 
@@ -32,26 +55,27 @@ export async function GET() {
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const current = readData();
+    const current = await readData();
 
     // If posting a full daily analysis
     if (body.matches) {
       const updated = {
         ...body,
         generatedAt: new Date().toISOString(),
-        log: current.log || [],
+        log: (current as { log?: unknown[] }).log || [],
       };
-      writeData(updated);
+      await writeData(updated);
       return NextResponse.json({ ok: true });
     }
 
-    // If posting a result log entry (outcome of a past pick)
+    // If posting a result log entry
     if (body.logEntry) {
+      const cur = current as { log?: unknown[] };
       const updated = {
-        ...current,
-        log: [body.logEntry, ...(current.log || [])].slice(0, 200),
+        ...cur,
+        log: [body.logEntry, ...(cur.log || [])].slice(0, 200),
       };
-      writeData(updated);
+      await writeData(updated);
       return NextResponse.json({ ok: true });
     }
 

@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.102.0",
+    "@vercel/kv": "^3.0.0",
     "cheerio": "^1.2.0",
     "next": "16.2.7",
     "playwright": "^1.60.0",
