@@ -14,7 +14,12 @@ function readData() {
 }
 
 function writeData(data: unknown) {
-  fs.writeFileSync(DATA_PATH, JSON.stringify(data, null, 2), "utf-8");
+  try {
+    fs.writeFileSync(DATA_PATH, JSON.stringify(data, null, 2), "utf-8");
+  } catch {
+    // On Vercel (read-only filesystem) writes are silently ignored
+    // Data is updated via redeployment from GitHub
+  }
 }
 
 // GET — return current analysis
