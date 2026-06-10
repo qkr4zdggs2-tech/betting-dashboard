@@ -34,6 +34,14 @@ export default function Header() {
             >
               🎾 Tennis
             </Link>
+            <Link
+              href="/football"
+              className={`px-3 py-1.5 rounded-lg text-sm font-medium transition ${
+                pathname === "/football" ? "bg-green-700 text-white" : "text-gray-400 hover:text-white hover:bg-gray-800"
+              }`}
+            >
+              🏆 World Cup
+            </Link>
           </nav>
         </div>
         <div className="flex items-center gap-2 text-sm text-gray-400">
