@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s *)",
+      "Bash(curl -sv *)",
+      "Bash(curl -fsSL *)",
+      "Bash(lsof -ti *)",
+      "Bash(lsof -ti * | xargs kill -9 *)",
+      "Bash(mkdir -p *)",
+      "Bash(python3 -*)",
+      "WebSearch",
+      "WebFetch"
+    ]
+  }
+}
