@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useCallback } from "react";
 import Header from "@/components/Header";
+import FootballLiveScores from "@/components/FootballLiveScores";
 
 interface FootballMatch {
   id: string;
@@ -200,7 +201,7 @@ export default function FootballPage() {
   const [data, setData] = useState<FootballData | null>(null);
   const [loading, setLoading] = useState(true);
   const [filter, setFilter] = useState<"all" | "top" | "upset">("all");
-  const [activeTab, setActiveTab] = useState<"picks" | "log">("picks");
+  const [activeTab, setActiveTab] = useState<"picks" | "live" | "log">("picks");
 
   const fetchData = useCallback(async () => {
     try {
@@ -302,6 +303,9 @@ export default function FootballPage() {
           <button onClick={() => setActiveTab("picks")} className={`px-4 py-2 rounded-lg text-sm font-medium transition ${activeTab === "picks" ? "bg-green-700 text-white" : "bg-gray-800 text-gray-400 hover:bg-gray-700"}`}>
             Match Picks
           </button>
+          <button onClick={() => setActiveTab("live")} className={`px-4 py-2 rounded-lg text-sm font-medium transition ${activeTab === "live" ? "bg-green-700 text-white" : "bg-gray-800 text-gray-400 hover:bg-gray-700"}`}>
+            🔴 Live Scores
+          </button>
           <button onClick={() => setActiveTab("log")} className={`px-4 py-2 rounded-lg text-sm font-medium transition ${activeTab === "log" ? "bg-green-700 text-white" : "bg-gray-800 text-gray-400 hover:bg-gray-700"}`}>
             Results Log {total > 0 && `(${total})`}
           </button>
@@ -331,6 +335,8 @@ export default function FootballPage() {
             </div>
           </>
         )}
+
+        {activeTab === "live" && <FootballLiveScores />}
 
         {activeTab === "log" && (
           <div className="bg-gray-900 border border-gray-800 rounded-xl p-5">
