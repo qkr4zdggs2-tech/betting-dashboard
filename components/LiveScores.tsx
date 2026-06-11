@@ -59,13 +59,13 @@ function WinPctBar({ pct, isWinner }: { pct: number; isWinner: boolean }) {
     <div className="flex items-center gap-1 mt-0.5">
       <div className="w-16 h-1.5 bg-gray-700 rounded-full overflow-hidden">
         <div
-          className={`h-full rounded-full ${pct >= 75 ? "bg-emerald-500" : pct >= 60 ? "bg-yellow-500" : "bg-orange-500"}`}
+          className={`h-full rounded-full ${pct >= 75 ? "bg-coral-500" : pct >= 60 ? "bg-yellow-500" : "bg-orange-500"}`}
           style={{ width: `${pct}%` }}
         />
       </div>
       <span className={`text-xs font-bold tabular-nums ${
         isWinner
-          ? pct >= 75 ? "text-emerald-400" : pct >= 60 ? "text-yellow-400" : "text-orange-400"
+          ? pct >= 75 ? "text-coral-400" : pct >= 60 ? "text-yellow-400" : "text-orange-400"
           : "text-gray-500"
       }`}>{pct}%</span>
     </div>
@@ -108,7 +108,7 @@ function ScoreGrid({ m, pick }: { m: LiveMatch; pick?: PickMatch }) {
         <div className="w-32 min-w-0">
           <div className={`text-xs truncate font-medium ${state === "post" && p1Wins ? "text-white" : "text-gray-300"}`}>
             {m.player1}
-            {state === "post" && p1Wins && <span className="text-emerald-400 ml-1">✓</span>}
+            {state === "post" && p1Wins && <span className="text-coral-400 ml-1">✓</span>}
           </div>
           {p1Pct != null && <WinPctBar pct={p1Pct} isWinner={p1Wins || state !== "post"} />}
         </div>
@@ -127,7 +127,7 @@ function ScoreGrid({ m, pick }: { m: LiveMatch; pick?: PickMatch }) {
         })}
         {numSets > 0 && (
           <div className={`w-8 text-center text-sm font-bold ${
-            state === "post" && p1Wins ? "text-emerald-400" :
+            state === "post" && p1Wins ? "text-coral-400" :
             state === "in" ? "text-yellow-400" : "text-gray-400"
           }`}>
             {setsWon1}
@@ -140,7 +140,7 @@ function ScoreGrid({ m, pick }: { m: LiveMatch; pick?: PickMatch }) {
         <div className="w-32 min-w-0">
           <div className={`text-xs truncate font-medium ${state === "post" && p2Wins ? "text-white" : "text-gray-300"}`}>
             {m.player2}
-            {state === "post" && p2Wins && <span className="text-emerald-400 ml-1">✓</span>}
+            {state === "post" && p2Wins && <span className="text-coral-400 ml-1">✓</span>}
           </div>
           {p2Pct != null && <WinPctBar pct={p2Pct} isWinner={p2Wins || state !== "post"} />}
         </div>
@@ -159,7 +159,7 @@ function ScoreGrid({ m, pick }: { m: LiveMatch; pick?: PickMatch }) {
         })}
         {numSets > 0 && (
           <div className={`w-8 text-center text-sm font-bold ${
-            state === "post" && p2Wins ? "text-emerald-400" :
+            state === "post" && p2Wins ? "text-coral-400" :
             state === "in" ? "text-yellow-400" : "text-gray-400"
           }`}>
             {setsWon2}
@@ -372,7 +372,7 @@ export default function LiveScores() {
             key={f}
             onClick={() => setFilter(f)}
             className={`px-3 py-1.5 rounded-lg text-xs font-medium transition ${
-              filter === f ? "bg-emerald-600 text-white" : "bg-gray-800 text-gray-400 hover:bg-gray-700"
+              filter === f ? "bg-coral-600 text-white" : "bg-gray-800 text-gray-400 hover:bg-gray-700"
             }`}
           >
             {label}
@@ -386,7 +386,7 @@ export default function LiveScores() {
       {/* Loading */}
       {loading && (
         <div className="flex items-center justify-center py-16">
-          <div className="w-6 h-6 border-2 border-emerald-500 border-t-transparent rounded-full animate-spin" />
+          <div className="w-6 h-6 border-2 border-coral-500 border-t-transparent rounded-full animate-spin" />
         </div>
       )}
 

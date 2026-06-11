@@ -52,13 +52,13 @@ function WinPctBar({ pct, isWinner }: { pct: number; isWinner: boolean }) {
     <div className="flex items-center gap-1 mt-0.5">
       <div className="w-16 h-1.5 bg-gray-700 rounded-full overflow-hidden">
         <div
-          className={`h-full rounded-full ${pct >= 60 ? "bg-emerald-500" : pct >= 40 ? "bg-yellow-500" : "bg-orange-500"}`}
+          className={`h-full rounded-full ${pct >= 60 ? "bg-coral-500" : pct >= 40 ? "bg-yellow-500" : "bg-orange-500"}`}
           style={{ width: `${pct}%` }}
         />
       </div>
       <span className={`text-xs font-bold tabular-nums ${
         isWinner
-          ? pct >= 60 ? "text-emerald-400" : pct >= 40 ? "text-yellow-400" : "text-orange-400"
+          ? pct >= 60 ? "text-coral-400" : pct >= 40 ? "text-yellow-400" : "text-orange-400"
           : "text-gray-500"
       }`}>{pct}%</span>
     </div>
@@ -82,14 +82,14 @@ function TeamRow({ name, goals, isWinner, state, pct }: {
       <div className="min-w-0 flex-1">
         <div className={`text-sm font-medium truncate ${state === "post" && isWinner ? "text-white" : "text-gray-300"}`}>
           {name}
-          {state === "post" && isWinner && <span className="text-emerald-400 ml-1">✓</span>}
+          {state === "post" && isWinner && <span className="text-coral-400 ml-1">✓</span>}
         </div>
         {pct != null && pct > 0 && <WinPctBar pct={pct} isWinner={isWinner || state !== "post"} />}
       </div>
       {goals != null && (
         <span className={`text-lg font-bold tabular-nums shrink-0 ${
           state === "in" ? "text-yellow-400" :
-          state === "post" && isWinner ? "text-emerald-400" : "text-gray-300"
+          state === "post" && isWinner ? "text-coral-400" : "text-gray-300"
         }`}>{goals}</span>
       )}
     </div>
@@ -112,7 +112,7 @@ function LiveMatchCard({ m, pick }: { m: LiveMatch; pick?: PickMatch }) {
     }`}>
       <div className="flex items-center justify-between gap-2">
         <div className="flex items-center gap-1.5 min-w-0">
-          <span className="text-xs font-semibold px-1.5 py-0.5 rounded bg-green-900/40 text-green-400">⚽</span>
+          <span className="text-xs font-semibold px-1.5 py-0.5 rounded bg-coral-900/40 text-coral-400">⚽</span>
           <span className="text-xs text-gray-500 truncate">{m.tournament}</span>
         </div>
         {isLive && (
@@ -239,7 +239,7 @@ export default function FootballLiveScores() {
             key={f}
             onClick={() => setFilter(f)}
             className={`px-3 py-1.5 rounded-lg text-xs font-medium transition ${
-              filter === f ? "bg-green-700 text-white" : "bg-gray-800 text-gray-400 hover:bg-gray-700"
+              filter === f ? "bg-coral-700 text-white" : "bg-gray-800 text-gray-400 hover:bg-gray-700"
             }`}
           >
             {label}
@@ -251,7 +251,7 @@ export default function FootballLiveScores() {
 
       {loading && (
         <div className="flex items-center justify-center py-16">
-          <div className="w-6 h-6 border-2 border-green-500 border-t-transparent rounded-full animate-spin" />
+          <div className="w-6 h-6 border-2 border-coral-500 border-t-transparent rounded-full animate-spin" />
         </div>
       )}
 

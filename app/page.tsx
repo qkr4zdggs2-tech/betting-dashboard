@@ -99,7 +99,7 @@ export default function Home() {
           <button
             onClick={fetchData}
             disabled={loading}
-            className="flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 disabled:opacity-50 text-white text-sm font-medium px-4 py-2 rounded-lg transition"
+            className="flex items-center gap-2 bg-coral-600 hover:bg-coral-500 disabled:opacity-50 text-white text-sm font-medium px-4 py-2 rounded-lg transition"
           >
             {loading ? "Loading…" : "⟳ Refresh"}
           </button>
@@ -116,7 +116,7 @@ export default function Home() {
               onClick={() => setSportFilter(s)}
               className={`px-3 py-1.5 rounded-lg text-sm font-medium transition ${
                 sportFilter === s
-                  ? "bg-emerald-600 text-white"
+                  ? "bg-coral-600 text-white"
                   : "bg-gray-800 text-gray-300 hover:bg-gray-700"
               }`}
             >
@@ -128,7 +128,7 @@ export default function Home() {
         {/* Loading state */}
         {loading && !data && (
           <div className="flex flex-col items-center justify-center py-24 gap-4">
-            <div className="w-10 h-10 border-4 border-emerald-500 border-t-transparent rounded-full animate-spin" />
+            <div className="w-10 h-10 border-4 border-coral-500 border-t-transparent rounded-full animate-spin" />
             <p className="text-gray-400">Loading match data…</p>
           </div>
         )}

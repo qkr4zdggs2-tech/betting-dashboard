@@ -1,5 +1,20 @@
 @import "tailwindcss";
 
+@theme {
+  /* Claude coral / terracotta accent palette */
+  --color-coral-50: #faf3f0;
+  --color-coral-100: #f5e4dc;
+  --color-coral-200: #eec8b8;
+  --color-coral-300: #e3a98f;
+  --color-coral-400: #d98e6e;
+  --color-coral-500: #d97757;
+  --color-coral-600: #c2613f;
+  --color-coral-700: #9e4d31;
+  --color-coral-800: #6e3724;
+  --color-coral-900: #422017;
+  --color-coral-950: #2a1410;
+}
+
 body {
   background: #030712;
   color: #f9fafb;

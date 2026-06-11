@@ -51,32 +51,32 @@ interface TennisData {
 // ── Helpers ────────────────────────────────────────────────────────────────────
 
 const SURFACE_COLOR: Record<string, string> = {
-  grass: "text-emerald-400 bg-emerald-500/10 border-emerald-500/20",
+  grass: "text-coral-400 bg-coral-500/10 border-coral-500/20",
   clay: "text-orange-400 bg-orange-500/10 border-orange-500/20",
   hard: "text-blue-400 bg-blue-500/10 border-blue-500/20",
 };
 
 const SURFACE_DOT: Record<string, string> = {
-  grass: "bg-emerald-400",
+  grass: "bg-coral-400",
   clay: "bg-orange-400",
   hard: "bg-blue-400",
 };
 
 const CONFIDENCE_COLOR: Record<string, string> = {
-  high: "text-emerald-400",
-  "medium-high": "text-emerald-300",
+  high: "text-coral-400",
+  "medium-high": "text-coral-300",
   medium: "text-yellow-400",
   low: "text-gray-500",
 };
 
 const BAGEL_COLOR: Record<string, string> = {
-  "no bagel": "text-emerald-400",
+  "no bagel": "text-coral-400",
   "bagel risk": "text-orange-400",
   "avoid no-bagel": "text-red-400",
 };
 
 const OUTCOME_STYLE: Record<string, string> = {
-  win: "text-emerald-400",
+  win: "text-coral-400",
   loss: "text-red-400",
   void: "text-gray-400",
   pending: "text-yellow-400",
@@ -89,14 +89,14 @@ function WinnerBar({ pct, name }: { pct: number; name: string }) {
       <div className="flex-1 h-2 bg-gray-700 rounded-full overflow-hidden">
         <div
           className={`h-full rounded-full transition-all duration-500 ${
-            pct >= 75 ? "bg-emerald-500" : pct >= 60 ? "bg-yellow-500" : "bg-orange-500"
+            pct >= 75 ? "bg-coral-500" : pct >= 60 ? "bg-yellow-500" : "bg-orange-500"
           }`}
           style={{ width: `${pct}%` }}
         />
       </div>
       <span
         className={`text-sm font-bold tabular-nums ${
-          pct >= 75 ? "text-emerald-400" : pct >= 60 ? "text-yellow-400" : "text-orange-400"
+          pct >= 75 ? "text-coral-400" : pct >= 60 ? "text-yellow-400" : "text-orange-400"
         }`}
       >
         {pct}%
@@ -111,7 +111,7 @@ function MatchCard({ m }: { m: TennisMatchPick }) {
     <div
       className={`bg-gray-900 border rounded-xl p-5 flex flex-col gap-4 cursor-pointer transition-all ${
         m.isTopPick
-          ? "border-emerald-500/40 hover:border-emerald-500/70"
+          ? "border-coral-500/40 hover:border-coral-500/70"
           : m.isUpsetAlert
           ? "border-orange-500/30 hover:border-orange-500/60"
           : "border-gray-800 hover:border-gray-700"
@@ -135,7 +135,7 @@ function MatchCard({ m }: { m: TennisMatchPick }) {
             <span className="text-xs text-gray-600">·</span>
             <span className="text-xs text-gray-400 font-medium">{m.time}</span>
             {m.isTopPick && (
-              <span className="text-xs bg-emerald-500/15 text-emerald-400 border border-emerald-500/30 px-2 py-0.5 rounded-full font-semibold">
+              <span className="text-xs bg-coral-500/15 text-coral-400 border border-coral-500/30 px-2 py-0.5 rounded-full font-semibold">
                 🔑 Top Pick
               </span>
             )}
@@ -165,7 +165,7 @@ function MatchCard({ m }: { m: TennisMatchPick }) {
         {/* Line */}
         <div className="bg-gray-800 rounded-lg px-3 py-2 flex items-center gap-2">
           <span className="text-xs text-gray-400">Line</span>
-          <span className={`text-sm font-bold uppercase ${m.lineDirection === "over" ? "text-emerald-400" : "text-blue-400"}`}>
+          <span className={`text-sm font-bold uppercase ${m.lineDirection === "over" ? "text-coral-400" : "text-blue-400"}`}>
             {m.lineDirection}
           </span>
           <span className="text-sm font-bold text-white">{m.lineValue} {m.lineType}</span>
@@ -276,7 +276,7 @@ export default function TennisPage() {
           <button
             onClick={fetchData}
             disabled={loading}
-            className="flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 disabled:opacity-50 text-white text-sm font-medium px-4 py-2 rounded-lg transition"
+            className="flex items-center gap-2 bg-coral-600 hover:bg-coral-500 disabled:opacity-50 text-white text-sm font-medium px-4 py-2 rounded-lg transition"
           >
             {loading ? "Loading…" : "⟳ Refresh"}
           </button>
@@ -291,7 +291,7 @@ export default function TennisPage() {
             </div>
             <div className="bg-gray-900 border border-gray-800 rounded-xl p-4">
               <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">Top Picks</p>
-              <p className="text-2xl font-bold text-emerald-400">{matches.filter(m => m.isTopPick).length}</p>
+              <p className="text-2xl font-bold text-coral-400">{matches.filter(m => m.isTopPick).length}</p>
             </div>
             <div className="bg-gray-900 border border-gray-800 rounded-xl p-4">
               <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">Upset Alerts</p>
@@ -322,20 +322,20 @@ export default function TennisPage() {
         <div className="flex gap-2 mb-4">
           <button
             onClick={() => setActiveTab("picks")}
-            className={`px-4 py-2 rounded-lg text-sm font-medium transition ${activeTab === "picks" ? "bg-emerald-600 text-white" : "bg-gray-800 text-gray-400 hover:bg-gray-700"}`}
+            className={`px-4 py-2 rounded-lg text-sm font-medium transition ${activeTab === "picks" ? "bg-coral-600 text-white" : "bg-gray-800 text-gray-400 hover:bg-gray-700"}`}
           >
             Today's Picks
           </button>
           <button
             onClick={() => setActiveTab("scores")}
-            className={`px-4 py-2 rounded-lg text-sm font-medium transition flex items-center gap-1.5 ${activeTab === "scores" ? "bg-emerald-600 text-white" : "bg-gray-800 text-gray-400 hover:bg-gray-700"}`}
+            className={`px-4 py-2 rounded-lg text-sm font-medium transition flex items-center gap-1.5 ${activeTab === "scores" ? "bg-coral-600 text-white" : "bg-gray-800 text-gray-400 hover:bg-gray-700"}`}
           >
             <span className="w-1.5 h-1.5 rounded-full bg-red-400 animate-pulse" />
             Live Scores
           </button>
           <button
             onClick={() => setActiveTab("log")}
-            className={`px-4 py-2 rounded-lg text-sm font-medium transition ${activeTab === "log" ? "bg-emerald-600 text-white" : "bg-gray-800 text-gray-400 hover:bg-gray-700"}`}
+            className={`px-4 py-2 rounded-lg text-sm font-medium transition ${activeTab === "log" ? "bg-coral-600 text-white" : "bg-gray-800 text-gray-400 hover:bg-gray-700"}`}
           >
             Results Log {total > 0 && `(${total})`}
           </button>
@@ -351,7 +351,7 @@ export default function TennisPage() {
                   <button
                     key={f}
                     onClick={() => setFilter(f)}
-                    className={`px-3 py-1.5 rounded-lg text-xs font-medium transition ${filter === f ? "bg-emerald-600 text-white" : "bg-gray-800 text-gray-400 hover:bg-gray-700"}`}
+                    className={`px-3 py-1.5 rounded-lg text-xs font-medium transition ${filter === f ? "bg-coral-600 text-white" : "bg-gray-800 text-gray-400 hover:bg-gray-700"}`}
                   >
                     {f === "all" ? "All Matches" : f === "top" ? "🔑 Top Picks" : "⚠️ Upset Alerts"}
                   </button>
@@ -362,7 +362,7 @@ export default function TennisPage() {
             {/* Loading */}
             {loading && !data && (
               <div className="flex flex-col items-center justify-center py-24 gap-4">
-                <div className="w-10 h-10 border-4 border-emerald-500 border-t-transparent rounded-full animate-spin" />
+                <div className="w-10 h-10 border-4 border-coral-500 border-t-transparent rounded-full animate-spin" />
                 <p className="text-gray-400">Loading analysis…</p>
               </div>
             )}
@@ -419,7 +419,7 @@ export default function TennisPage() {
                 {/* Summary */}
                 <div className="mt-4 pt-4 border-t border-gray-800 flex items-center gap-6 text-sm">
                   <span className="text-gray-400">Total: <span className="text-white font-bold">{total}</span></span>
-                  <span className="text-emerald-400">Wins: <span className="font-bold">{wins}</span></span>
+                  <span className="text-coral-400">Wins: <span className="font-bold">{wins}</span></span>
                   <span className="text-red-400">Losses: <span className="font-bold">{losses}</span></span>
                   {total > 0 && (
                     <span className="text-yellow-400">

@@ -35,7 +35,7 @@ export default function StatsBar({
       </div>
       <div className="bg-gray-900 border border-gray-800 rounded-xl p-4">
         <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">Value Bets</p>
-        <p className="text-2xl font-bold text-emerald-400">{bets.length}</p>
+        <p className="text-2xl font-bold text-coral-400">{bets.length}</p>
       </div>
       <div className="bg-gray-900 border border-gray-800 rounded-xl p-4">
         <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">Best Edge</p>

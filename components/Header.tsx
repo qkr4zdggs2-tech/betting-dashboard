@@ -9,11 +9,11 @@ export default function Header() {
       <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
         <div className="flex items-center gap-4">
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 bg-emerald-500 rounded-lg flex items-center justify-center text-black font-bold text-sm">
+            <div className="w-8 h-8 bg-coral-500 rounded-lg flex items-center justify-center text-black font-bold text-sm">
               VB
             </div>
             <span className="font-bold text-lg tracking-tight">ValueBets</span>
-            <span className="text-xs bg-emerald-900 text-emerald-400 px-2 py-0.5 rounded-full font-medium">
+            <span className="text-xs bg-coral-900 text-coral-400 px-2 py-0.5 rounded-full font-medium">
               LIVE
             </span>
           </div>
@@ -37,7 +37,7 @@ export default function Header() {
             <Link
               href="/football"
               className={`px-3 py-1.5 rounded-lg text-sm font-medium transition ${
-                pathname === "/football" ? "bg-green-700 text-white" : "text-gray-400 hover:text-white hover:bg-gray-800"
+                pathname === "/football" ? "bg-coral-700 text-white" : "text-gray-400 hover:text-white hover:bg-gray-800"
               }`}
             >
               🏆 World Cup
@@ -45,7 +45,7 @@ export default function Header() {
           </nav>
         </div>
         <div className="flex items-center gap-2 text-sm text-gray-400">
-          <span className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse inline-block" />
+          <span className="w-2 h-2 bg-coral-500 rounded-full animate-pulse inline-block" />
           Scanning Betano · Tipsport · Fortuna
         </div>
       </div>

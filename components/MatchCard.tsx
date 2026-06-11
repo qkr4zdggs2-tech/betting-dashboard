@@ -17,13 +17,13 @@ function formatCountdown(iso: string): string {
 }
 
 function confidenceColor(c: number) {
-  if (c >= 70) return "text-emerald-400";
+  if (c >= 70) return "text-coral-400";
   if (c >= 55) return "text-yellow-400";
   return "text-orange-400";
 }
 
 function riskBadge(risk: string) {
-  if (risk === "low")    return "bg-emerald-500/10 text-emerald-400 border-emerald-500/20";
+  if (risk === "low")    return "bg-coral-500/10 text-coral-400 border-coral-500/20";
   if (risk === "medium") return "bg-yellow-500/10 text-yellow-400 border-yellow-500/20";
   return "bg-orange-500/10 text-orange-400 border-orange-500/20";
 }
@@ -49,7 +49,7 @@ export default function MatchCard({
   return (
     <div
       onClick={onClick}
-      className="bg-gray-900 border border-gray-800 rounded-xl p-5 flex flex-col gap-4 hover:border-emerald-600/40 hover:bg-gray-800/50 transition cursor-pointer group"
+      className="bg-gray-900 border border-gray-800 rounded-xl p-5 flex flex-col gap-4 hover:border-coral-600/40 hover:bg-gray-800/50 transition cursor-pointer group"
     >
       {/* Match header */}
       <div className="flex items-start justify-between gap-2">
@@ -60,7 +60,7 @@ export default function MatchCard({
             <span>·</span>
             <span className={countdown === "Live" ? "text-red-400 font-medium" : ""}>{countdown}</span>
           </div>
-          <p className="text-sm font-semibold text-white leading-snug group-hover:text-emerald-400 transition">
+          <p className="text-sm font-semibold text-white leading-snug group-hover:text-coral-400 transition">
             {group.homeTeam} <span className="text-gray-500 font-normal">vs</span> {group.awayTeam}
           </p>
         </div>
@@ -106,7 +106,7 @@ export default function MatchCard({
                   <p className="text-xs text-gray-400 mt-0.5">@ {analysis.bestBookmaker}</p>
                 </div>
                 <div className="text-right shrink-0">
-                  <p className="text-2xl font-bold text-emerald-400">{analysis.bestOdds}</p>
+                  <p className="text-2xl font-bold text-coral-400">{analysis.bestOdds}</p>
                   <p className={`text-xs font-semibold ${confidenceColor(analysis.confidence)}`}>
                     {analysis.confidence}% conf
                   </p>
@@ -127,7 +127,7 @@ export default function MatchCard({
             <div className="flex items-center gap-2 w-28">
               <div className="flex-1 h-1.5 bg-gray-700 rounded-full overflow-hidden">
                 <div
-                  className={`h-full rounded-full ${analysis.recommendation === "no_bet" ? "bg-gray-600" : analysis.confidence >= 70 ? "bg-emerald-500" : analysis.confidence >= 55 ? "bg-yellow-500" : "bg-orange-500"}`}
+                  className={`h-full rounded-full ${analysis.recommendation === "no_bet" ? "bg-gray-600" : analysis.confidence >= 70 ? "bg-coral-500" : analysis.confidence >= 55 ? "bg-yellow-500" : "bg-orange-500"}`}
                   style={{ width: `${analysis.confidence}%` }}
                 />
               </div>

@@ -27,14 +27,14 @@ const SPORT_ICON: Record<string, string> = {
 };
 
 function riskColor(risk: string) {
-  if (risk === "low")    return "text-emerald-400 bg-emerald-400/10 border-emerald-400/30";
+  if (risk === "low")    return "text-coral-400 bg-coral-400/10 border-coral-400/30";
   if (risk === "medium") return "text-yellow-400 bg-yellow-400/10 border-yellow-400/30";
   return "text-red-400 bg-red-400/10 border-red-400/30";
 }
 
 function confidenceBar(confidence: number) {
   const color =
-    confidence >= 70 ? "bg-emerald-500" : confidence >= 55 ? "bg-yellow-500" : "bg-red-500";
+    confidence >= 70 ? "bg-coral-500" : confidence >= 55 ? "bg-yellow-500" : "bg-red-500";
   return (
     <div className="flex items-center gap-3">
       <div className="flex-1 h-2 bg-gray-700 rounded-full overflow-hidden">
@@ -104,7 +104,7 @@ export default function MatchModal({ group, onClose }: { group: MatchGroup; onCl
         <div className="overflow-y-auto flex-1 px-6 py-5 flex flex-col gap-6">
           {loading && (
             <div className="flex flex-col items-center justify-center py-16 gap-4">
-              <div className="w-10 h-10 border-4 border-emerald-500 border-t-transparent rounded-full animate-spin" />
+              <div className="w-10 h-10 border-4 border-coral-500 border-t-transparent rounded-full animate-spin" />
               <p className="text-gray-400 text-sm">Analysing {group.homeTeam} vs {group.awayTeam}…</p>
               <p className="text-gray-600 text-xs">Checking {group.bets.length > 0 ? "odds, form & H2H" : "available data"}</p>
             </div>
@@ -134,7 +134,7 @@ export default function MatchModal({ group, onClose }: { group: MatchGroup; onCl
                           <span className="text-3xl">🎯</span>
                           <div>
                             <p className="text-xs text-gray-400 mb-0.5">Bet on</p>
-                            <p className="text-xl font-bold text-emerald-400">{analysis.recommendationLabel}</p>
+                            <p className="text-xl font-bold text-coral-400">{analysis.recommendationLabel}</p>
                             <p className="text-sm text-gray-400">
                               @ {analysis.bestBookmaker} · odds{" "}
                               <span className="text-white font-bold">{analysis.bestOdds}</span>
@@ -196,7 +196,7 @@ export default function MatchModal({ group, onClose }: { group: MatchGroup; onCl
                   <ul className="flex flex-col gap-2">
                     {analysis.keyFactors.map((f, i) => (
                       <li key={i} className="flex items-start gap-2 text-sm text-gray-300">
-                        <span className="text-emerald-500 mt-0.5 shrink-0">▸</span>
+                        <span className="text-coral-500 mt-0.5 shrink-0">▸</span>
                         {f}
                       </li>
                     ))}
@@ -241,7 +241,7 @@ export default function MatchModal({ group, onClose }: { group: MatchGroup; onCl
                               }).map((cell, i) => (
                                 <td key={i} className="text-center px-3 py-2.5">
                                   {cell ? (
-                                    <span className="font-bold text-emerald-400 bg-emerald-400/10 px-2 py-0.5 rounded text-xs">
+                                    <span className="font-bold text-coral-400 bg-coral-400/10 px-2 py-0.5 rounded text-xs">
                                       {cell.bookOdds} ✓
                                     </span>
                                   ) : <span className="text-gray-600">—</span>}
