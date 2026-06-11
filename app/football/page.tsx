@@ -24,6 +24,7 @@ interface FootballMatch {
   btts: boolean;
   isTopPick?: boolean;
   isUpsetAlert?: boolean;
+  bestBets?: string[];
   odds?: { home: number; draw: number; away: number };
   result?: string;
   resultOutcome?: "win" | "loss" | "void";
@@ -156,8 +157,21 @@ function MatchCard({ m }: { m: FootballMatch }) {
 
       {/* Analysis */}
       {expanded && (
-        <div className="border-t border-gray-800 pt-3">
+        <div className="border-t border-gray-800 pt-3 flex flex-col gap-3">
           <p className="text-sm text-gray-300 leading-relaxed">{m.analysis}</p>
+          {m.bestBets && m.bestBets.length > 0 && (
+            <div>
+              <p className="text-xs font-bold text-emerald-400 uppercase tracking-wider mb-1.5">💰 Best Bets</p>
+              <ul className="flex flex-col gap-1">
+                {m.bestBets.map((bet, i) => (
+                  <li key={i} className="text-xs text-emerald-200/80 flex gap-1.5">
+                    <span className="text-emerald-500 shrink-0">▸</span>
+                    <span>{bet}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
       )}
 

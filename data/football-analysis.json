@@ -18,13 +18,18 @@
       "loser": "South Africa",
       "loserPct": 14,
       "lineDirection": "over",
-      "lineValue": 2.5,
+      "lineValue": 1.5,
       "lineType": "goals",
-      "lineConfidence": "medium",
+      "lineConfidence": "high",
       "btts": false,
       "isTopPick": true,
       "isUpsetAlert": false,
-      "odds": { "home": 1.65, "draw": 3.80, "away": 5.50 }
+      "bestBets": [
+        "Mexico -1 handicap (~1.85) — výhra o 2+ góly, doma v Azteca 7000 stop nad mořem, JAR bez aklimatizace",
+        "Raúl Jiménez anytime scorer (~2.50) — jediný útočník, hraje proti nezkušené obraně",
+        "Mexico vede v poločase (~1.95) — tlak vyhrát rychle před domácími fanoušky"
+      ],
+      "odds": { "home": 1.40, "draw": 3.50, "away": 8.50 }
     },
     {
       "id": "kor-cze-jun11",
@@ -80,28 +85,32 @@
       "venue": "MetLife Stadium, New Jersey",
       "time": "00:00",
       "date": "2026-06-14",
-      "analysis": "Zápas víkendu! Brazil přijíždějí bez Rodryga (ACL), Estevaoa (hamstring) a Neymar je pochybný (zranění lýtka). Morocco jsou WC 2022 semifinalisté — dokázali vyřadit Španělsko a Portugalsko. Defenzivně velmi silní. Brazil jsou favorité ale zranění z nich dělají zranitelný tým. UPSET ALERT.",
+      "analysis": "Zápas víkendu! Brazil přijíždějí bez Rodryga (ACL, mimo celý 2026). Neymar se vrací po 2 letech místo Estevãa — fitness je největší neznámá. Morocco jsou WC 2022 semifinalisté ale mají vlastní zranění: Mazraoui a Ezzalzouli vypadli v přípravě, Aguerd nehrál od března. Brazil pod Ancelottim favorité (-145). Trh favorizuje Brazil výhru + oba týmy skórují (4.00). Morocco mají organizaci a brejkovou kvalitu — zůstanou ve hře.",
       "winner": "Brazil",
-      "winnerPct": 52,
-      "drawPct": 25,
+      "winnerPct": 55,
+      "drawPct": 24,
       "loser": "Morocco",
-      "loserPct": 23,
-      "lineDirection": "under",
+      "loserPct": 21,
+      "lineDirection": "over",
       "lineValue": 2.5,
       "lineType": "goals",
-      "lineConfidence": "medium-high",
-      "btts": false,
+      "lineConfidence": "medium",
+      "btts": true,
       "isTopPick": false,
       "isUpsetAlert": true,
-      "odds": { "home": 1.95, "draw": 3.30, "away": 4.00 }
+      "bestBets": [
+        "Brazil výhra + BTTS (~4.00) — top tip trhu, Morocco skóruje z brejků ale Brazil vyhraje",
+        "Korektní skóre Brazil 2-1 (~9.00) — hodnotová sázka na těsnou výhru favorita"
+      ],
+      "odds": { "home": 1.69, "draw": 3.60, "away": 4.80 }
     }
   ],
   "topPicks": [
-    "Mexico vítěz vs Jižní Afrika — domácí prostředí Azteca, skvělá forma, kurz 1.65",
-    "Brazil vs Morocco Under 2.5 gólů — Morocco defenzivní specialisté, Brazil bez Rodryga/Neymara"
+    "Mexico -1 handicap vs Jižní Afrika (~1.85) — Azteca 7000 m.n.m., JAR bez aklimatizace, jasná hodnota",
+    "Brazil výhra + oba skórují vs Morocco (~4.00) — top tip trhu, Brazil vyhraje ale Morocco skóruje z brejku"
   ],
   "upsetAlerts": [
-    "Morocco remíza nebo výhra vs Brazil — WC 2022 semifinalisté, Brazil oslabeni zraněními"
+    "Morocco remíza nebo výhra vs Brazil — WC 2022 semifinalisté, Neymar po 2 letech bez formy"
   ],
   "log": []
 }
