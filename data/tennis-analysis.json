@@ -129,64 +129,64 @@
     {
       "date": "11.06",
       "match": "Fritz vs Landaluce",
-      "pick": "Fritz vítěz",
+      "pick": "Fritz / U22.5 games",
       "result": "7-6 5-7 6-7 (38g)",
-      "outcome": "win"
+      "outcome": "loss"
     },
     {
       "date": "11.06",
       "match": "Shelton vs Giron",
-      "pick": "Shelton vítěz",
-      "result": "2-1 sety",
-      "outcome": "win"
+      "pick": "Shelton / U22.5 games",
+      "result": "6-7 6-4 7-6 (36g)",
+      "outcome": "loss"
     },
     {
       "date": "11.06",
       "match": "Kyrgios vs Shimabukuro",
-      "pick": "Kyrgios vítěz",
-      "result": "4-6 7-6 6-4 (Shimabukuro)",
+      "pick": "Kyrgios / U21.5 games",
+      "result": "4-6 7-6 6-4 (33g)",
       "outcome": "loss"
     },
     {
       "date": "11.06",
       "match": "Lehecka vs Duckworth",
-      "pick": "Lehecka vítěz",
+      "pick": "Lehecka / U21.5 games",
       "result": "6-7 6-4 7-6 (36g)",
-      "outcome": "win"
+      "outcome": "loss"
     },
     {
       "date": "11.06",
       "match": "Tiafoe vs Hijikata",
-      "pick": "Tiafoe vítěz",
+      "pick": "Tiafoe / O21.5 games",
       "result": "6-4 6-4 (20g)",
-      "outcome": "win"
+      "outcome": "loss"
     },
     {
       "date": "11.06",
       "match": "Medvedev vs Boogaard",
-      "pick": "Medvedev vítěz / U20.5",
-      "result": "2-1 sety",
-      "outcome": "win"
+      "pick": "Medvedev / U20.5 games",
+      "result": "6-3 4-6 7-6 (32g)",
+      "outcome": "loss"
     },
     {
       "date": "11.06",
       "match": "Rybakina vs T.Maria",
-      "pick": "Rybakina vítěz",
-      "result": "2-1 sety",
+      "pick": "Rybakina / O19.5 games",
+      "result": "6-7 7-5 6-0 (31g)",
       "outcome": "win"
     },
     {
       "date": "11.06",
       "match": "Bencic vs Dart",
-      "pick": "Bencic / U20.5",
+      "pick": "Bencic / U20.5 games",
       "result": "Zrušeno",
       "outcome": "void"
     },
     {
       "date": "11.06",
       "match": "Raducanu vs Cirstea",
-      "pick": "Cirstea upset",
-      "result": "0-6 0-6 (Raducanu 2-0)",
+      "pick": "Cirstea / O20.5 games",
+      "result": "4-6 2-6 (18g)",
       "outcome": "loss"
     },
     {
