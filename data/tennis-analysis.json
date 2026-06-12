@@ -1,7 +1,12 @@
 {
   "date": "2026-06-12",
   "generatedAt": "2026-06-12T08:00:00.000Z",
-  "tournaments": ["Stuttgart ATP", "Hertogenbosch ATP", "HSBC Championships WTA", "Hertogenbosch WTA"],
+  "tournaments": [
+    "Stuttgart ATP",
+    "Hertogenbosch ATP",
+    "HSBC Championships WTA",
+    "Hertogenbosch WTA"
+  ],
   "matches": [
     {
       "id": "medvedev-cilic-jun12",
@@ -120,5 +125,125 @@
     "Tiafoe Over 8.5 aces — silný first serve na rychlé trávě",
     "Lehecka Over 6.5 aces — solidní servis, rostoucí grass forma"
   ],
-  "log": []
+  "log": [
+    {
+      "date": "10.06",
+      "match": "Bublik vs Struff",
+      "pick": "Bublik / O21.5 games",
+      "result": "7-6(3) 3-6 6-2 (30g)",
+      "outcome": "win"
+    },
+    {
+      "date": "10.06",
+      "match": "de Minaur vs Damm",
+      "pick": "de Minaur / U19.5 games",
+      "result": "7-6(8) 7-5 (25g)",
+      "outcome": "loss"
+    },
+    {
+      "date": "10.06",
+      "match": "Anisimova vs Siegemund",
+      "pick": "Anisimova / U20.5 games",
+      "result": "6-1 6-3 (16g)",
+      "outcome": "win"
+    },
+    {
+      "date": "10.06",
+      "match": "Jovic vs Eala",
+      "pick": "Jovic / U19.5 games",
+      "result": "6-2 6-2 (16g)",
+      "outcome": "win"
+    },
+    {
+      "date": "10.06",
+      "match": "Bellucci vs Hanfmann",
+      "pick": "Bellucci / O21.5 games",
+      "result": "7-5 6-7(4) 6-2 (33g)",
+      "outcome": "win"
+    },
+    {
+      "date": "10.06",
+      "match": "Pliskova vs Mboko",
+      "pick": "Pliskova upset",
+      "result": "Pliskova retired 4-3",
+      "outcome": "void"
+    },
+    {
+      "date": "09.06",
+      "match": "Krejcikova vs Zarazua",
+      "pick": "Krejcikova / U20.5",
+      "result": "6-1 6-2 (15g)",
+      "outcome": "win"
+    },
+    {
+      "date": "09.06",
+      "match": "Bejlek vs Yastremska",
+      "pick": "Yastremska / U20.5",
+      "result": "6-1 6-2 (15g)",
+      "outcome": "win"
+    },
+    {
+      "date": "08.06",
+      "match": "Humbert vs Ymer",
+      "pick": "Humbert / U21.5",
+      "result": "6-4 6-3 (19g)",
+      "outcome": "win"
+    },
+    {
+      "date": "08.06",
+      "match": "Mertens vs Andreescu",
+      "pick": "Mertens / U21.5",
+      "result": "6-1 6-2 (15g)",
+      "outcome": "win"
+    },
+    {
+      "date": "08.06",
+      "match": "Cilic vs Shapovalov",
+      "pick": "O21.5 / no bagel",
+      "result": "6-7 6-4 7-5 (35g)",
+      "outcome": "win"
+    },
+    {
+      "date": "08.06",
+      "match": "Alexandrova vs Udvardy",
+      "pick": "Alexandrova / U2.5s",
+      "result": "Udvardy won 6-4 7-6",
+      "outcome": "loss"
+    },
+    {
+      "date": "08.06",
+      "match": "Zheng vs Cristian",
+      "pick": "Zheng / U20.5",
+      "result": "Cristian won 6-4 7-6",
+      "outcome": "loss"
+    },
+    {
+      "date": "02.06",
+      "match": "Svitolina vs Kostyuk",
+      "pick": "O20.5 games",
+      "result": "21 games",
+      "outcome": "win"
+    },
+    {
+      "date": "02.06",
+      "match": "Andreeva vs Cirstea",
+      "pick": "U20.5 games",
+      "result": "15 games",
+      "outcome": "win"
+    },
+    {
+      "date": "02.06",
+      "match": "Mensik vs Fonseca",
+      "pick": "O37.5 games",
+      "result": "32 games",
+      "outcome": "loss"
+    },
+    {
+      "date": "03.06",
+      "match": "Sabalenka vs Shnaider",
+      "pick": "U2.5 sets",
+      "result": "Shnaider won",
+      "outcome": "loss"
+    }
+  ]
 }
