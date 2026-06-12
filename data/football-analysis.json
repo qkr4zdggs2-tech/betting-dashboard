@@ -112,5 +112,20 @@
   "upsetAlerts": [
     "Morocco remíza nebo výhra vs Brazil — WC 2022 semifinalisté, Neymar po 2 letech bez formy"
   ],
-  "log": []
+  "log": [
+    {
+      "date": "2026-06-11",
+      "match": "Mexico vs South Africa",
+      "pick": "Mexico -1 handicap",
+      "result": "2-0",
+      "outcome": "win"
+    },
+    {
+      "date": "2026-06-12",
+      "match": "South Korea vs Czechia",
+      "pick": "Czechia / Under 2.5",
+      "result": "2-1 KOR",
+      "outcome": "loss"
+    }
+  ]
 }
