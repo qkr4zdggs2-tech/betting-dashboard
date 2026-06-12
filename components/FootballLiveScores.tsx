@@ -26,6 +26,11 @@ interface PickMatch {
   drawPct: number;
   loser: string;
   loserPct: number;
+  lineDirection?: "over" | "under";
+  lineValue?: number;
+  lineType?: string;
+  btts?: boolean;
+  isTopPick?: boolean;
 }
 
 function formatTime(iso: string) {
@@ -131,6 +136,30 @@ function LiveMatchCard({ m, pick }: { m: LiveMatch; pick?: PickMatch }) {
       </div>
 
       {isDraw && <p className="text-xs text-yellow-400/70 text-center -mt-1">Draw</p>}
+
+      {/* Our pick for this match */}
+      {pick && (
+        <div className="border-t border-gray-800 pt-2 flex items-center gap-2 flex-wrap">
+          <span className="text-xs text-gray-500">Tip:</span>
+          {pick.isTopPick && <span className="text-xs">🔑</span>}
+          <span className="text-xs font-semibold text-coral-400">{pick.winner}</span>
+          {pick.lineValue != null && pick.lineDirection && (
+            <span className="text-xs text-gray-300">
+              · {pick.lineType === "goals" ? "Góly" : pick.lineType ?? "Góly"}{" "}
+              <span className={`font-semibold uppercase ${pick.lineDirection === "over" ? "text-coral-400" : "text-blue-400"}`}>
+                {pick.lineDirection}
+              </span>{" "}
+              {pick.lineValue}
+            </span>
+          )}
+          {pick.btts != null && (
+            <span className="text-xs text-gray-300">
+              · BTTS <span className={pick.btts ? "text-coral-400 font-semibold" : "text-red-400 font-semibold"}>{pick.btts ? "✓" : "✗"}</span>
+            </span>
+          )}
+        </div>
+      )}
+
       <p className="text-xs text-gray-700 text-right -mt-1">{formatDate(m.startTime)}</p>
     </div>
   );
