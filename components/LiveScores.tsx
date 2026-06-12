@@ -29,6 +29,11 @@ interface PickMatch {
   winnerPct: number;
   loser: string;
   loserPct: number;
+  lineDirection?: "over" | "under";
+  lineValue?: number;
+  lineType?: string;
+  acesLine?: string;
+  isTopPick?: boolean;
 }
 
 // ── Helpers ────────────────────────────────────────────────────────────────────
@@ -236,6 +241,27 @@ function LiveMatchCard({ m, pick }: { m: LiveMatch; pick?: PickMatch }) {
               />
             )}
           </div>
+        </div>
+      )}
+
+      {/* Our pick for this match */}
+      {pick && (
+        <div className="border-t border-gray-800 pt-2 flex items-center gap-2 flex-wrap">
+          <span className="text-xs text-gray-500">Tip:</span>
+          {pick.isTopPick && <span className="text-xs">🔑</span>}
+          <span className="text-xs font-semibold text-coral-400">{pick.winner}</span>
+          {pick.lineValue != null && pick.lineDirection && (
+            <span className="text-xs text-gray-300">
+              · {pick.lineType === "games" ? "Hry" : pick.lineType ?? "Hry"}{" "}
+              <span className={`font-semibold uppercase ${pick.lineDirection === "over" ? "text-coral-400" : "text-blue-400"}`}>
+                {pick.lineDirection}
+              </span>{" "}
+              {pick.lineValue}
+            </span>
+          )}
+          {pick.acesLine && (
+            <span className="text-xs text-yellow-400/90 w-full">🎾 {pick.acesLine}</span>
+          )}
         </div>
       )}
 
