@@ -127,6 +127,69 @@
   ],
   "log": [
     {
+      "date": "11.06",
+      "match": "Fritz vs Landaluce",
+      "pick": "Fritz vítěz",
+      "result": "7-6 5-7 6-7 (38g)",
+      "outcome": "win"
+    },
+    {
+      "date": "11.06",
+      "match": "Shelton vs Giron",
+      "pick": "Shelton vítěz",
+      "result": "2-1 sety",
+      "outcome": "win"
+    },
+    {
+      "date": "11.06",
+      "match": "Kyrgios vs Shimabukuro",
+      "pick": "Kyrgios vítěz",
+      "result": "4-6 7-6 6-4 (Shimabukuro)",
+      "outcome": "loss"
+    },
+    {
+      "date": "11.06",
+      "match": "Lehecka vs Duckworth",
+      "pick": "Lehecka vítěz",
+      "result": "6-7 6-4 7-6 (36g)",
+      "outcome": "win"
+    },
+    {
+      "date": "11.06",
+      "match": "Tiafoe vs Hijikata",
+      "pick": "Tiafoe vítěz",
+      "result": "6-4 6-4 (20g)",
+      "outcome": "win"
+    },
+    {
+      "date": "11.06",
+      "match": "Medvedev vs Boogaard",
+      "pick": "Medvedev vítěz / U20.5",
+      "result": "2-1 sety",
+      "outcome": "win"
+    },
+    {
+      "date": "11.06",
+      "match": "Rybakina vs T.Maria",
+      "pick": "Rybakina vítěz",
+      "result": "2-1 sety",
+      "outcome": "win"
+    },
+    {
+      "date": "11.06",
+      "match": "Bencic vs Dart",
+      "pick": "Bencic / U20.5",
+      "result": "Zrušeno",
+      "outcome": "void"
+    },
+    {
+      "date": "11.06",
+      "match": "Raducanu vs Cirstea",
+      "pick": "Cirstea upset",
+      "result": "0-6 0-6 (Raducanu 2-0)",
+      "outcome": "loss"
+    },
+    {
       "date": "10.06",
       "match": "Bublik vs Struff",
       "pick": "Bublik / O21.5 games",
